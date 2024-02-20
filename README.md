@@ -2,8 +2,8 @@
 a demo of rtsp client with libcurl and a client to receive rtp packet
 
 ## How to use
-- Start the rstp server, here using EasyDarwin, and EasyDarwin starts listening on port rstp10054.
-- Push streams to rstp port 10054 using ffmpeg.
+- Start the rtsp server, here using EasyDarwin, and EasyDarwin starts listening on port rtsp10054.
+- Push streams to rtsp port 10054 using ffmpeg.
 ```
 $ ffmpeg -re -stream_loop -1 -i ~/vedio/MVI_3144.MP4 -c copy -f rtsp rtsp://127.0.0.1:10054/stream
 ```
@@ -12,7 +12,7 @@ $ ffmpeg -re -stream_loop -1 -i ~/vedio/MVI_3144.MP4 -c copy -f rtsp rtsp://127.
 $ gcc rtsp_client.c -lcurl -o rtsp_client
 $ gcc rtp_client.c -o rtp_client
 ```
-- Run rtsp_client to trigger the rstp server to push streams to port 36464
+- Run rtsp_client to trigger the rtsp server to push streams to port 36464
 ```
 $. / rtsp_client RTSP://127.0.0.1:10054/stream
 ```
