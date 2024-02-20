@@ -14,7 +14,7 @@ $ gcc rtp_client.c -o rtp_client
 ```
 - Run rtsp_client to trigger the rtsp server to push streams to port 36464
 ```
-$. / rtsp_client RTSP://127.0.0.1:10054/stream
+$./rtsp_client RTSP://127.0.0.1:10054/stream
 ```
 - Run rtp_client, which receives the rtp packet and resolves the timestamp field
 ```
